@@ -13,6 +13,7 @@ import {
   UserCheck,
   X,
   CheckCircle,
+  AlertCircle,
 } from "lucide-react";
 
 interface MainPageProps {
@@ -273,6 +274,19 @@ export const MainPage: React.FC<MainPageProps> = ({ onNavigate, isDarkMode = fal
                   <p className={`text-lg ${isDarkMode ? 'text-green-300' : 'text-green-600'}`}>
                     يمكنك الآن البحث عن نتيجتك من خلال صفحة النتائج
                   </p>
+                  <div className={`mt-4 p-4 rounded-xl border ${
+                    isDarkMode 
+                      ? 'bg-yellow-900/30 border-yellow-600/50 text-yellow-200' 
+                      : 'bg-yellow-100 border-yellow-300 text-yellow-800'
+                  }`}>
+                    <div className="flex items-center justify-center gap-2 mb-2">
+                      <AlertCircle className="w-5 h-5" />
+                      <span className="font-semibold">للحصول على أفضل تجربة</span>
+                    </div>
+                    <p className="text-sm text-center">
+                      يُفضل عرض الموقع من الكمبيوتر أو تعيين المتصفح كـ "موقع مصمم للكمبيوتر" للحصول على أداء وعرض أفضل
+                    </p>
+                  </div>
                 </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">

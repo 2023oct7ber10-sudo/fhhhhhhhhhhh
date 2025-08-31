@@ -177,6 +177,19 @@ export const AllResultsSection: React.FC<AllResultsSectionProps> = ({ isDarkMode
                   <p className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                     أدخل كلمة المرور لعرض جميع النتائج
                   </p>
+                  <div className={`mt-4 p-4 rounded-xl border ${
+                    isDarkMode 
+                      ? 'bg-yellow-900/30 border-yellow-600/50 text-yellow-200' 
+                      : 'bg-yellow-100 border-yellow-300 text-yellow-800'
+                  }`}>
+                    <div className="flex items-center justify-center gap-2 mb-2">
+                      <AlertCircle className="w-5 h-5" />
+                      <span className="font-semibold">للحصول على أفضل تجربة</span>
+                    </div>
+                    <p className="text-sm text-center">
+                      يُفضل عرض الموقع من الكمبيوتر أو تعيين المتصفح كـ "موقع مصمم للكمبيوتر" للحصول على أداء وعرض أفضل
+                    </p>
+                  </div>
                 </div>
 
                 <form onSubmit={handlePasswordSubmit} className="space-y-6">
